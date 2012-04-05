@@ -33,7 +33,7 @@ class ClipboardDisplayCommand(sublime_plugin.TextCommand):
 # support it. This lets us respond to ctrl-c and ctrl-x, without having
 # to re-implement the copy and cut commands. (Important, since
 # run_command("copy") doesn't do anything.)
-class ClipboardListner(sublime_plugin.EventListener):
+class ClipboardListener(sublime_plugin.EventListener):
     def on_query_context(self, view, key, *args):
         if key != "clipboardcopy_fake":
             return None
