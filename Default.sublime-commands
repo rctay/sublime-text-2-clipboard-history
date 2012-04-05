@@ -2,5 +2,9 @@
 	{
 		"caption": "Clipboard History",
 		"command": "clipboard_display"
+	},
+	{
+		"caption": "Clear Clipboard History",
+		"command": "clipboard_clear"
 	}
 ]

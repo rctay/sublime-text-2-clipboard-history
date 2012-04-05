@@ -29,6 +29,11 @@ class ClipboardDisplayCommand(sublime_plugin.TextCommand):
             self.view.run_command('paste')
 
 
+class ClipboardClearCommand(sublime_plugin.TextCommand):
+    def run(self, edit):
+        del history[0:]
+
+
 # Here we see a cunning plan. We listen for a key, but never say we
 # support it. This lets us respond to ctrl-c and ctrl-x, without having
 # to re-implement the copy and cut commands. (Important, since
