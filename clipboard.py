@@ -38,7 +38,6 @@ class ClipboardListner(sublime_plugin.EventListener):
         if key != "clipboardcopy_fake":
             return None
         for selected in view.sel():
-            selected = view.sel()[0]
             if selected.empty():
                 selected = view.line(selected)
 
